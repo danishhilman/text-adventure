@@ -487,7 +487,20 @@ while start == True:
                         level_one = False
                         level_two = False
                         break
-                    break
+                #42 55 47 ending 
+                elif choice_level_2 == "42 55 47":
+                    print("you did it")
+                    time.sleep(1)
+                    print("you found out the truth")
+                    time.sleep(1)
+                    print("its time")
+                    time.sleep(1)
+                    print("this wont hurt")
+                    time.sleep(1)
+                    print("goodbye")
+                    time.sleep(1)
+                    print("You were debugged")
+                    exit()                    
                 else:
                     print("ERROR DECISION INVALID: Enter decision again.")
                     print("Enter 'Fight' or 'Talk' ")

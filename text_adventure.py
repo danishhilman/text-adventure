@@ -786,7 +786,7 @@ while start == True:
                     print("Enter 'Fight' or 'Talk' ")
                     fight_or_talk_decision_level_2 = input(">>").strip(">>").lower().replace(" ", "")
 
-        elif choice_level_2 == "42 55 47":
+        elif choice_level_2 == "425547":
             print("you did it")
             time.sleep(1)
             print("you found out the truth")

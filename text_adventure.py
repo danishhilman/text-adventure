@@ -146,6 +146,9 @@ player_one.respawn()
 #Weapon Fist
 weapon_fist = Weapon("Fist", 0.1)
 
+#Weapon Nethrite_Sword
+weapon_netherite_sword = Weapon("Minecraft Netherite Sword", 800)
+
 #Room 1:1 weapons
 weapon_long_sword = Weapon("Long Sword", 50)
 weapon_bow = Weapon("Bow", 15)
@@ -543,7 +546,7 @@ while start == True:
                     decision_level_2 = True
                     print("Lets talk!")
                     time.sleep(0.5)
-                    print("The %s charged towards you at full speed" % enemy_virus.name)
+                    print("The %s charges towards you at full speed" % enemy_virus.name)
                     time.sleep(0.5)
                     print("It went inside you..")
                     time.sleep(3)
@@ -551,7 +554,15 @@ while start == True:
                     time.sleep(1)
                     print("You feel fine")
                     time.sleep(2)
-                    print("You proceeded to go through the door")
+                    cprint("go through the door", "red", attrs=["dark"])
+                    time.sleep(1)
+                    print("What! Who said that?")
+                    time.sleep(2)
+                    cprint("Its me %s, i'm in your head now."%enemy_virus.name, "red", attrs=["dark"])
+                    time.sleep(2)
+                    print("Great...")
+                    time.sleep(2)
+                    print("You went through the door.")
                     time.sleep(1)
                     print("Everything went dark..")
                     start = False
@@ -561,6 +572,24 @@ while start == True:
                 #fight
                 elif fight_or_talk_decision_level_2 == "fight":
                     decision_level_2 = True
+                    if current_weapon is weapon_diamond_sword:
+                        cprint("Whoa a %s"%weapon_diamond_sword.name, "red")
+                        time.sleep(1)
+                        cprint("Nice", "red")
+                        time.sleep(2)
+                        print("The %s charges towards your %s"%enemy_virus.name, weapon_diamond_sword.name)
+                        time.sleep(2)
+                        current_weapon = weapon_netherite_sword
+                        print("Your %s turned in to a %s"%weapon_diamond_sword.name, weapon_netherite_sword.name)
+                        time.sleep(2)
+                        print("You proceeded to go through the door")
+                        time.sleep(1)
+                        print("Everything went dark..")
+                        time.sleep(1)
+                        start = False
+                        level_one = False
+                        level_two = False
+                        break
                     print("You decided to fight " + enemy_virus.name)
                     time.sleep(0.5)
                     attack_until_ko(player_one, enemy_virus, current_weapon)

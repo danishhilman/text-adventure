@@ -85,7 +85,7 @@ class Player:
         self.is_alive = True
         if self.health == 0:
             self.health = self.max_health
-        print("You woke up in a room")
+        print("You woke up in an empty room")
 
     #for player knock out
     def knock_out(self):
@@ -579,7 +579,7 @@ while start == True:
             print("Yourself.")
             time.sleep(3)
             print(enemy_you.name + ": ", end="")
-            cprint(color.PURPLE+"Hello"+color.END, end=" ")
+            print("Hello", end=" ")
             cprint(player_one.name, "white")
             time.sleep(1)
             print("What will you do:")
@@ -599,7 +599,13 @@ while start == True:
                 #talk
                 if fight_or_talk_decision_level_2 == "talk":
                     decision_level_2 = True
-                    print("Lets talk!")
+                    print("Are you actually me?")
+                    time.sleep(0.5)
+                    print(enemy_you.name + ": Yes.")
+                    time.sleep(0.5)
+                    print("How is this possible?")
+                    time.sleep(0.5)
+                    print(enemy_you.name + ": Its not.")
                     time.sleep(0.5)
                     print(enemy_you.name + ": I'll end this.")
                     time.sleep(1)
@@ -646,7 +652,7 @@ while start == True:
             print(enemy_friend.name)
             time.sleep(3)
             print(enemy_friend.name + ": ", end="")
-            cprint(color.BLUE+"Hello"+color.END, end=" ")
+            print("Hello", end=" ")
             cprint(player_one.name, "white")
             time.sleep(1)
             print("What will you do:")
@@ -767,6 +773,19 @@ while start == True:
                     print("Enter 'Fight' or 'Talk' ")
                     fight_or_talk_decision_level_2 = input(">>").strip(">>").lower().replace(" ", "")
 
+        elif choice_level_2 == "42 55 47":
+            print("you did it")
+            time.sleep(1)
+            print("you found out the truth")
+            time.sleep(1)
+            print("its time")
+            time.sleep(1)
+            print("this wont hurt")
+            time.sleep(1)
+            print("goodbye")
+            time.sleep(1)
+            print("You were debugged")
+            exit()
             #if choice_level_2 was unexpected
         else:
             print("ERROR DECISION INVALID: Enter decision again.")

@@ -544,7 +544,7 @@ while start == True:
                 #talk
                 if fight_or_talk_decision_level_2 == "talk":
                     decision_level_2 = True
-                    print("Lets talk!")
+                    print("What are you?")
                     time.sleep(0.5)
                     print("The %s charges towards you at full speed" % enemy_virus.name)
                     time.sleep(0.5)

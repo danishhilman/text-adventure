@@ -170,6 +170,7 @@ enemy_foe = Enemy(color.YELLOW + "44 45 42 55 47 47 45 52" + color.END, 150, 75)
 
 #Start Game
 start = True
+player_went_back = False
 level_one = True
 level_two = False
 
@@ -407,11 +408,15 @@ while start == True:
             break
 
         time.sleep(1.5)
-        print("You decided to go through the door.")
+        if player_went_back == True:
+            print("You decided to go back.")
+        else:
+            print("You decided to go through the door.")
         time.sleep(1.2)
         print("....")
         time.sleep(1)
-        print("There's five more doors...")
+        if player_went_back == False:
+            print("There's five more doors...")
         time.sleep(1.2)
         print("Which door will you go through?")   
         choice_level_2 = input(">>").strip(">>").lower().replace(" ", "")
@@ -462,17 +467,19 @@ while start == True:
                 #talk
                 if fight_or_talk_decision_level_2 == "talk":
                     decision_level_2 = True
-                    print("Please let me through")
-                    time.sleep(0.5)
-                    print(enemy_bug.name + ": Oh Ok.")
-                    time.sleep(0.5)
-                    print("You went through the door")
-                    time.sleep(0.5)
-                    print("Everything went dark..")
+                    print("Please let me through.")
+                    time.sleep(1.5)
+                    print(enemy_bug.name + ": I can't.")
                     time.sleep(1)
-                    start = False
+                    print("Why not?")
+                    time.sleep(1.5)
+                    print(enemy_bug.name + ": You'll understand soon.")
+                    time.sleep(1)
+                    print(enemy_bug.name + ": You should go back.")
+                    start = True
                     level_one = False
-                    level_two = False
+                    level_two = True
+                    player_went_back = True
                     break
                 #fight
                 elif fight_or_talk_decision_level_2 == "fight":

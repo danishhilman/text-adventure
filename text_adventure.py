@@ -577,10 +577,10 @@ while start == True:
                         time.sleep(1)
                         cprint("Nice", "red")
                         time.sleep(2)
-                        print("The %s charges towards your %s"%enemy_virus.name, weapon_diamond_sword.name)
+                        print("The %s charges towards your %s"%(enemy_virus.name, weapon_diamond_sword.name))
                         time.sleep(2)
                         current_weapon = weapon_netherite_sword
-                        print("Your %s turned in to a %s"%weapon_diamond_sword.name, weapon_netherite_sword.name)
+                        print("Your %s turned in to a %s"%(weapon_diamond_sword.name, weapon_netherite_sword.name))
                         time.sleep(2)
                         print("You proceeded to go through the door")
                         time.sleep(1)

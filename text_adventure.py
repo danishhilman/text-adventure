@@ -767,6 +767,26 @@ while start == True:
                 #fight
                 elif fight_or_talk_decision_level_2 == "fight":
                     decision_level_2 = True
+                    if current_weapon is weapon_long_sword:
+                        time.sleep(1)
+                        cprint("\"Is that Long Sword?\"", "yellow")
+                        time.sleep(1)
+                        print("Yeah...")
+                        time.sleep(1)
+                        cprint("\"Thats a pretty long sword..\"", "yellow")
+                        time.sleep(1)
+                        cprint("I'll let you pass.")
+                        time.sleep(1)
+                        print("That was weird.")
+                        time.sleep(1)
+                        print("You proceeded to go through the door.")
+                        time.sleep(1)
+                        print("Everything went dark..")
+                        time.sleep(1)
+                        start = False
+                        level_one = False
+                        level_two = False
+                        break
                     attack_until_ko(player_one, enemy_foe, current_weapon)
                     time.sleep(1)
                     if player_one.is_alive == True:

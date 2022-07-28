@@ -1,4 +1,4 @@
-# text-adventure
+# Text Adventure
 Python Terminal Game
 
 

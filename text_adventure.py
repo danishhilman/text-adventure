@@ -735,7 +735,7 @@ while start == True:
             time.sleep(1.5)
             print("Unless you have something to throw or shoot with.")
             time.sleep(1.5)
-            print("Theres someone here with you.")
+            print("There's someone here with you.")
             time.sleep(2)
             print("You see a...")
             time.sleep(2)

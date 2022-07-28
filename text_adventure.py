@@ -147,7 +147,7 @@ player_one.respawn()
 weapon_fist = Weapon("Fist", 0.1)
 
 #Weapon Nethrite_Sword
-weapon_netherite_sword = Weapon("Minecraft Netherite Sword", 800)
+weapon_virus_sword = Weapon("Infected Sword", 800)
 
 #Room 1:1 weapons
 weapon_long_sword = Weapon("Long Sword", 50)
@@ -456,6 +456,7 @@ while start == True:
                 time.sleep(3)
                 print("But you feel the need to stay here and... Guard the door.")
                 time.sleep(4)
+                print("Ending 8 of 12")
                 exit()
             time.sleep(0.5)
             print("You're in room 1:2")
@@ -530,21 +531,9 @@ while start == True:
                         start = False
                         level_one = False
                         level_two = False
+                        print("Ending 1 of 12")
                         break
-                #42 55 47 ending 
-                elif choice_level_2 == "425547":
-                    print("you did it")
-                    time.sleep(1)
-                    print("you found out the truth")
-                    time.sleep(1)
-                    print("its time")
-                    time.sleep(1)
-                    print("this wont hurt")
-                    time.sleep(1)
-                    print("goodbye")
-                    time.sleep(1)
-                    print("You were debugged")
-                    exit()                    
+
                 else:
                     print("ERROR DECISION INVALID: Enter decision again.")
                     print("Enter 'Fight' or 'Talk' ")
@@ -607,9 +596,11 @@ while start == True:
                     print("You went through the door.")
                     time.sleep(1)
                     print("Everything went dark..")
+                    time.sleep(1)
                     start = False
                     level_one = False
                     level_two = False
+                    print("Ending 2 of 12")
                     break
                 #fight
                 elif fight_or_talk_decision_level_2 == "fight":
@@ -621,8 +612,10 @@ while start == True:
                         time.sleep(2)
                         print("The %s charges towards your %s"%(enemy_virus.name, weapon_diamond_sword.name))
                         time.sleep(2)
-                        current_weapon = weapon_netherite_sword
-                        print("Your %s turned in to a %s"%(weapon_diamond_sword.name, weapon_netherite_sword.name))
+                        current_weapon = weapon_virus_sword
+                        print("Your %s turned in to a %s"%(weapon_diamond_sword.name, weapon_virus_sword.name))
+                        time.sleep(2)
+                        print("That was weird")
                         time.sleep(2)
                         print("You proceeded to go through the door")
                         time.sleep(1)
@@ -631,6 +624,7 @@ while start == True:
                         start = False
                         level_one = False
                         level_two = False
+                        print("Ending 3 of 12")
                         break
                     print("You decided to fight " + enemy_virus.name)
                     time.sleep(0.5)
@@ -645,6 +639,7 @@ while start == True:
                         start = False
                         level_one = False
                         level_two = False
+                        print("Ending 4 of 12")
                         break
                 else:
                     print("ERROR DECISION INVALID: Enter decision again.")
@@ -699,9 +694,11 @@ while start == True:
                         cprint(" 53 41 56 45 20 4D 45 ", "grey", end=" ")
                     time.sleep(1)
                     print("Everything went dark..")
+                    time.sleep(1)
                     start = False
                     level_one = False
                     level_two = False
+                    print("Ending 5 of 12")
                     break
                 #fight
                 elif fight_or_talk_decision_level_2 == "fight":
@@ -718,6 +715,7 @@ while start == True:
                         start = False
                         level_one = False
                         level_two = False
+                        print("Ending 6 of 12")
                         break
                 else:
                     print("ERROR DECISION INVALID: Enter decision again.")
@@ -822,6 +820,7 @@ while start == True:
                         start = False
                         level_one = False
                         level_two = False
+                        print("Ending 7 of 12")
                         break
                     elif current_weapon is weapon_shuriken:
                         decision_level_2 = True
@@ -844,6 +843,7 @@ while start == True:
                         start = False
                         level_one = False
                         level_two = False
+                        print("Ending 7 of 12")
                         break                        
                     elif current_weapon is weapon_AK47:
                         decision_level_2 = True
@@ -866,6 +866,7 @@ while start == True:
                         start = False
                         level_one = False
                         level_two = False
+                        print("Ending 7 of 12")
                         break
 
                     else:
@@ -918,6 +919,7 @@ while start == True:
                     start = False
                     level_one = False
                     level_two = False
+                    print("Ending 10 of 12")
                     break
                 #fight
                 elif fight_or_talk_decision_level_2 == "fight":
@@ -941,6 +943,7 @@ while start == True:
                         start = False
                         level_one = False
                         level_two = False
+                        print("Ending 11 of 12")
                         break
                     attack_until_ko(player_one, enemy_foe, current_weapon)
                     time.sleep(1)
@@ -954,6 +957,7 @@ while start == True:
                         start = False
                         level_one = False
                         level_two = False
+                        print("Ending 12 of 12")
                         break
 
                 else:
@@ -973,6 +977,8 @@ while start == True:
             print("goodbye")
             time.sleep(1)
             print("You were debugged")
+            time.sleep(1)
+            print("Ending 9 of 12")
             exit()
             #if choice_level_2 was unexpected
         else:

@@ -696,7 +696,15 @@ while start == True:
             print("You're in room 4:2")
             time.sleep(1.3)
             print("There is a door that says 'exit'...")
+            time.sleep(1.5)
+            print("There's also a big button on the ceiling.")
             time.sleep(1.7)
+            print("There's no way you're pushing that button.")
+            time.sleep(1.5)
+            print("Unless you have something to throw or shoot with.")
+            time.sleep(1.5)
+            print("Theres someone here with you.")
+            time.sleep(2)
             print("You see a...")
             time.sleep(2)
             print(enemy_friend.name)
@@ -707,13 +715,15 @@ while start == True:
             time.sleep(1)
             print("What will you do:")
             time.sleep(0.8)
-            print("Fight")
-            time.sleep(0.3)
-            print("Or")
+            print("Fight,")
             time.sleep(0.3)
             print("Talk")
+            time.sleep(0.3)
+            print("or")
+            time.sleep(0.3)
+            print("Push the button")            
             time.sleep(0.5)
-            print("Enter: Fight or Talk")
+            print("Enter: Fight, Talk or Button")
             fight_or_talk_decision_level_2 = input(">>").strip(">>").lower().replace(" ", "")
             #Check if player chose fight or talk
             #loops until decision is made
@@ -755,6 +765,71 @@ while start == True:
                     level_one = True
                     level_two = False
                     break
+                
+                elif fight_or_talk_decision_level_2 == "button":
+                    if current_weapon is weapon_bow :
+                        print("You shot an arrow at the button.")
+                        time.sleep(2)
+                        print("The floor beneath you starts rumbling..")
+                        time.sleep(1)
+                        print(enemy_friend.name + ": WHAT HAVE YOU DONE!")
+                        time.sleep(1)
+                        print(enemy_friend.name + ": HE'll BE ANGRY!")
+                        time.sleep(1)
+                        print("Who's he?")
+                        time.sleep(1)
+                        print("The floor collasped.")
+                        time.sleep(1)
+                        print("You fell.")
+                        time.sleep(1)
+                        print("Everything went dark..")
+                        time.sleep(5)
+                        start = False
+                        level_one = False
+                        level_two = False
+                        break
+                    elif current_weapon is weapon_shuriken:
+                        print("You threw a shuriken at the button.")
+                        time.sleep(2)
+                        print("The floor beneath you starts rumbling..")
+                        time.sleep(1)
+                        print(enemy_friend.name + ": WHAT HAVE YOU DONE!")
+                        time.sleep(1)
+                        print(enemy_friend.name + ": HE'll BE ANGRY!")
+                        time.sleep(1)
+                        print("Who's he?")
+                        time.sleep(1)
+                        print("The floor collasped.")
+                        time.sleep(1)
+                        print("You fell.")
+                        time.sleep(1)
+                        print("Everything went dark..")
+                        time.sleep(5)
+                        start = False
+                        level_one = False
+                        level_two = False
+                        break                        
+                    elif current_weapon is weapon_AK47:
+                        print("You shot the button.")
+                        time.sleep(2)
+                        print("The floor beneath you starts rumbling..")
+                        time.sleep(1)
+                        print(enemy_friend.name + ": WHAT HAVE YOU DONE!")
+                        time.sleep(1)
+                        print(enemy_friend.name + ": HE'll BE ANGRY!")
+                        time.sleep(1)
+                        print("Who's he?")
+                        time.sleep(1)
+                        print("The floor collasped.")
+                        time.sleep(1)
+                        print("You fell.")
+                        time.sleep(1)
+                        print("Everything went dark..")
+                        time.sleep(5)
+                        start = False
+                        level_one = False
+                        level_two = False
+                        break
                 else:
                     print("ERROR DECISION INVALID: Enter decision again.")
                     print("Enter 'Fight' or 'Talk' ")

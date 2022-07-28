@@ -423,6 +423,40 @@ while start == True:
 
         #Room 1:2
         if choice_level_2 == "door1":
+            #if player name changed to "42 55 47"
+            if player_one.name == "42 55 47":
+                time.sleep(0.5)
+                print("You're in room 1:2")
+                time.sleep(1.5)
+                print("\"Hello " + player_one.name + "\"")
+                time.sleep(1.5)
+                print(enemy_bug.name + ": Finally someone to take my place.")
+                time.sleep(2)
+                print("The %s picked you up and webbed you to the ceiling" % enemy_bug.name)
+                time.sleep(2)
+                print("Let me out of here!")
+                time.sleep(2)
+                print(enemy_bug.name + ": At last im free.")
+                time.sleep(2)
+                print("%s vanished into thin air.." % enemy_bug.name)
+                time.sleep(10)
+                print("It feels like you've been stuck here for weeks")
+                time.sleep(4)
+                print("You've been thinking about what the %s called you.." % enemy_bug.name)
+                time.sleep(1)
+                print("\"42 55 47\"?")
+                time.sleep(2)
+                print("Is that my real name?")
+                time.sleep(2)
+                print("What does it mean?")
+                time.sleep(4)
+                print("You begin to lose your sanity.")
+                time.sleep(4)
+                print("You finally broke free from the %s's web." % enemy_bug.name)
+                time.sleep(3)
+                print("But you feel the need to stay here and... Guard the door.")
+                time.sleep(4)
+                exit()
             time.sleep(0.5)
             print("You're in room 1:2")
             time.sleep(1.3)
@@ -768,6 +802,7 @@ while start == True:
                 
                 elif fight_or_talk_decision_level_2 == "button":
                     if current_weapon is weapon_bow :
+                        decision_level_2 = True
                         print("You shot an arrow at the button.")
                         time.sleep(2)
                         print("The floor beneath you starts rumbling..")
@@ -789,6 +824,7 @@ while start == True:
                         level_two = False
                         break
                     elif current_weapon is weapon_shuriken:
+                        decision_level_2 = True
                         print("You threw a shuriken at the button.")
                         time.sleep(2)
                         print("The floor beneath you starts rumbling..")
@@ -810,6 +846,7 @@ while start == True:
                         level_two = False
                         break                        
                     elif current_weapon is weapon_AK47:
+                        decision_level_2 = True
                         print("You shot the button.")
                         time.sleep(2)
                         print("The floor beneath you starts rumbling..")
@@ -830,9 +867,15 @@ while start == True:
                         level_one = False
                         level_two = False
                         break
+
+                    else:
+                        print("You dont have anything to throw or shoot with.")
+                        print("Enter 'Fight' or 'Talk' ")
+                        fight_or_talk_decision_level_2 = input(">>").strip(">>").lower().replace(" ", "")
+                        
                 else:
                     print("ERROR DECISION INVALID: Enter decision again.")
-                    print("Enter 'Fight' or 'Talk' ")
+                    print("Enter 'Fight', 'Talk' or 'Button' ")
                     fight_or_talk_decision_level_2 = input(">>").strip(">>").lower().replace(" ", "")
 
         #room 5:2

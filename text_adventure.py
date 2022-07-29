@@ -409,6 +409,7 @@ while start == True:
 
         time.sleep(1.5)
         if player_went_back == True:
+            player_went_back = False
             print("You decided to go back.")
         else:
             print("You decided to go through the door.")
